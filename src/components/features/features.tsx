@@ -1,6 +1,6 @@
 import { CustomFieldsCard } from './custom-fields-card/custom-fields-card';
 import { FulfillmentCard } from './fulfillment-card/fulfillment-card';
-import { SectionTitle } from './section-title';
+import { SectionTitle } from '../section-title';
 import { VariantsCard } from './variants-card/variants-card';
 import { ZonesCard } from './zones-card/zones-card';
 

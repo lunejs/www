@@ -1,6 +1,6 @@
 import { WorkflowIcon } from 'lucide-react';
-import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';
-import { Badge } from '../ui/badge';
+import { Tooltip, TooltipContent, TooltipTrigger } from '../../ui/tooltip';
+import { Badge } from '../../ui/badge';
 
 export const OptionPreview = ({ title, values }: Props) => {
   return (

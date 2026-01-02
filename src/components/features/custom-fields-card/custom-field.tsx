@@ -15,7 +15,7 @@ import {
   ToggleLeftIcon,
   TypeIcon
 } from 'lucide-react';
-import { Input } from '../ui/input';
+import { Input } from '../../ui/input';
 import {
   Select,
   SelectContent,
@@ -24,7 +24,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue
-} from '../ui/select';
+} from '../../ui/select';
 
 export const CustomField = ({ inputDefault, typeDefault }: Props) => {
   return (

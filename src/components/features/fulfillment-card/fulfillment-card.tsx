@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { FeatureCard } from '../feature-card';
-import { Checkbox } from '../ui/checkbox';
+import { Checkbox } from '../../ui/checkbox';
 import { FulfillmentCardItem } from './fulfillment-card-item';
 
 export const FulfillmentCard = () => {

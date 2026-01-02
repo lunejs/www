@@ -1,7 +1,7 @@
 import { CircleFadingPlusIcon } from 'lucide-react';
 import { FeatureCard } from '../feature-card';
 import { OptionPreview } from './option-preview';
-import { Button } from '../ui/button';
+import { Button } from '../../ui/button';
 
 export const VariantsCard = () => {
   return (

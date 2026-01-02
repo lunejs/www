@@ -1,4 +1,4 @@
-import { Featured } from '@/components/features';
+import { Featured } from '@/components/features/features';
 import { Header } from '@/components/header';
 import { Hero } from '@/components/hero';
 
