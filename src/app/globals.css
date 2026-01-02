@@ -96,3 +96,13 @@
     @apply bg-background text-foreground font-sans;
   }
 }
+
+::selection {
+  color: var(--color-primary-foreground);
+  background: var(--color-primary);
+}
+
+::-moz-selection {
+  color: var(--color-primary-foreground);
+  background: var(--color-primary);
+}

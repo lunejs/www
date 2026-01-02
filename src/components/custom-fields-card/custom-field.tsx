@@ -29,7 +29,7 @@ import {
 export const CustomField = ({ inputDefault, typeDefault }: Props) => {
   return (
     <div className="flex flex-col items-center p-4 gap-4 sm:flex-row">
-      <Input className="font-platform" defaultValue={inputDefault} />
+      <Input className="font-platform" defaultValue={inputDefault} placeholder="Label" />
       <Select defaultValue="single">
         <SelectTrigger className="min-w-44 w-full font-platform">
           <SelectValue placeholder="Select a value" />

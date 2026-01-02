@@ -7,7 +7,7 @@ export const Featured = () => {
   return (
     <section className="max-w-5xl m-auto flex flex-col gap-10">
       <header>
-        <span className="text-sm uppercase text-distinct leading-5 tracking-[0.12em] sm:text-base">
+        <span className="text-sm uppercase text-distinct leading-5 tracking-[0.12em]">
           Simple by design
         </span>
         <h2 className="font-medium text-3xl sm:text-[40px]">Powerful by default.</h2>

@@ -57,7 +57,7 @@ export const FulfillmentCardItem = ({
           >
             <InputGroup className="w-17! h-8">
               <InputGroupInput
-                className=""
+                className="font-platform"
                 maxLength={1}
                 value={quantity}
                 onChange={e => {
@@ -71,7 +71,9 @@ export const FulfillmentCardItem = ({
                   }
                 }}
               />
-              <InputGroupAddon align={'inline-end'}>of {baseQuantity}</InputGroupAddon>
+              <InputGroupAddon align={'inline-end'} className="font-platform">
+                of {baseQuantity}
+              </InputGroupAddon>
             </InputGroup>
             <Button
               variant="outline"
@@ -101,8 +103,8 @@ export const FulfillmentCardItem = ({
           </ButtonGroup>
         ) : (
           <>
-            x
-            <Badge className="ml-2" variant={'secondary'}>
+            <span className="font-platform">x</span>
+            <Badge className="ml-2 font-platform" variant={'secondary'}>
               {baseQuantity}
             </Badge>
           </>
