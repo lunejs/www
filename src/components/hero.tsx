@@ -12,7 +12,8 @@ export const Hero = () => {
           </h1>
         </div>
         <p className="text-2xl">
-          Lune is an open-source solution for <br /> commerce management.
+          Lune is an open-source solution for <br className="hidden sm:inline" /> commerce
+          management.
         </p>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">

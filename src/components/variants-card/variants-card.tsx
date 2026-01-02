@@ -5,7 +5,7 @@ import { Button } from '../ui/button';
 
 export const VariantsCard = () => {
   return (
-    <FeatureCard className="col-span-1 md:col-span-5 p-6 flex flex-col justify-between">
+    <FeatureCard className="col-span-1 lg:col-span-5 p-4 flex flex-col justify-between sm:p-6">
       <div className="border rounded-md divide-y bg-card">
         <OptionPreview
           title="Color"

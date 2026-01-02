@@ -9,8 +9,8 @@ export const FulfillmentCard = () => {
   const [selected, setSelected] = useState<number[]>([]);
 
   return (
-    <FeatureCard className="col-span-1 md:col-span-3">
-      <div className="bg-card mx-4 rounded-b-md border border-t-0">
+    <FeatureCard className="col-span-1 lg:col-span-3">
+      <div className="bg-card mx-4 rounded-b-md border border-t-0 sm:mx-6">
         <header className="flex flex-col gap-2 border-b px-4 pt-3 pb-4">
           <p className="font-platform font-semibold text-lg leading-none">Add fulfillment</p>
           <p className="font-platform text-muted-foreground text-sm">
@@ -28,11 +28,23 @@ export const FulfillmentCard = () => {
           <p className="text-sm font-medium font-platform leading-none">Select all</p>
         </label>
         <div className="flex flex-col divide-y">
-          <FulfillmentCardItem baseQuantity={3} selected={selected} setSelected={setSelected} />
-          <FulfillmentCardItem baseQuantity={2} selected={selected} setSelected={setSelected} />
+          <FulfillmentCardItem
+            variant="Black / U"
+            image="/black-cup.webp"
+            baseQuantity={3}
+            selected={selected}
+            setSelected={setSelected}
+          />
+          <FulfillmentCardItem
+            variant="Gray / U"
+            image="/gray-cup.webp"
+            baseQuantity={2}
+            selected={selected}
+            setSelected={setSelected}
+          />
         </div>
       </div>
-      <footer className="p-6 pt-4 flex flex-col gap-2">
+      <footer className="p-4 pt-4 flex flex-col gap-2 sm:p-6 sm:pt-4">
         <p className="font-medium">Ship what&apos;s ready</p>
         <p className="text-muted-foreground">
           Partially fulfill orders in a few clicks. Ship now, complete the rest later.

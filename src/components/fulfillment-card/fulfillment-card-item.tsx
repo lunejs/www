@@ -7,7 +7,13 @@ import { InputGroup, InputGroupAddon, InputGroupInput } from '../ui/input-group'
 import { Button } from '../ui/button';
 import { MinusIcon, PlusIcon } from 'lucide-react';
 
-export const FulfillmentCardItem = ({ baseQuantity, selected, setSelected }: Props) => {
+export const FulfillmentCardItem = ({
+  variant,
+  image,
+  baseQuantity,
+  selected,
+  setSelected
+}: Props) => {
   const [quantity, setQuantity] = useState(baseQuantity);
 
   const isSelected = useMemo(
@@ -31,12 +37,12 @@ export const FulfillmentCardItem = ({ baseQuantity, selected, setSelected }: Pro
               else setSelected(prev => prev.filter(s => s !== baseQuantity));
             }}
           />
-          <img className="size-12 object-cover rounded-md" src="/black-cup.webp" />
+          <img className="size-12 object-cover rounded-md" src={image} />
 
           <div className="flex flex-col gap-2">
             <small className="font-platform font-medium text-sm leading-none">Cap</small>
-            <small className="font-platform font-medium text-sm leading-none text-muted-foreground">
-              Black / U
+            <small className="font-platform font-medium text-xs leading-none text-muted-foreground">
+              {variant}
             </small>
           </div>
         </div>
@@ -52,7 +58,7 @@ export const FulfillmentCardItem = ({ baseQuantity, selected, setSelected }: Pro
             <InputGroup className="w-17! h-8">
               <InputGroupInput
                 className=""
-                maxLength={2}
+                maxLength={1}
                 value={quantity}
                 onChange={e => {
                   if (e.target.value === '') setQuantity(0);
@@ -107,6 +113,8 @@ export const FulfillmentCardItem = ({ baseQuantity, selected, setSelected }: Pro
 };
 
 type Props = {
+  variant: string;
+  image: string;
   baseQuantity: number;
   selected: number[];
   setSelected: Dispatch<SetStateAction<number[]>>;
