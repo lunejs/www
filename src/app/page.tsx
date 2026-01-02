@@ -1,9 +1,9 @@
 import { CustomFieldsCard } from '@/components/custom-fields-card/custom-fields-card';
-import { FeatureCard } from '@/components/feature-card';
 import { FulfillmentCard } from '@/components/fulfillment-card/fulfillment-card';
 import { Header } from '@/components/header';
 import { Hero } from '@/components/hero';
 import { VariantsCard } from '@/components/variants-card/variants-card';
+import { ZonesCard } from '@/components/zones-card/zones-card';
 
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
           <FulfillmentCard />
           <VariantsCard />
           <CustomFieldsCard />
-          <FeatureCard className="col-span-1 md:col-span-3"></FeatureCard>
+          <ZonesCard />
         </div>
       </section>
     </div>

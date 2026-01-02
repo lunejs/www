@@ -1,0 +1,48 @@
+import { FeatureCard } from '../feature-card';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../ui/table';
+
+export const ZonesCard = () => {
+  return (
+    <FeatureCard className="col-span-1 md:col-span-3 flex flex-col justify-between gap-4">
+      <div className="bg-card p-4 pr-0 border border-r-0 rounded-md rounded-r-none ml-6 mt-6">
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead className="font-platform">Zone</TableHead>
+              <TableHead className="font-platform">Rates</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            <TableRow>
+              <TableCell>
+                <span className="font-platform">Local</span>
+              </TableCell>
+              <TableCell className="font-platform">{2}</TableCell>
+            </TableRow>
+
+            <TableRow>
+              <TableCell>
+                <span className="font-platform">South America</span>
+              </TableCell>
+              <TableCell className="font-platform">{1}</TableCell>
+            </TableRow>
+
+            <TableRow>
+              <TableCell>
+                <span className="font-platform">International</span>
+              </TableCell>
+              <TableCell className="font-platform">{1}</TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </div>
+
+      <footer className="px-6 pb-6 flex flex-col gap-2">
+        <p className="font-medium">Ship smarter</p>
+        <p className="text-muted-foreground">
+          Set rates by zone, offer in store pickup. Customers choose, you deliver.
+        </p>
+      </footer>
+    </FeatureCard>
+  );
+};
