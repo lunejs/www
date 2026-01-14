@@ -6,7 +6,7 @@ import { ZonesCard } from './zones-card/zones-card';
 
 export const Featured = () => {
   return (
-    <section className="max-w-5xl m-auto flex flex-col gap-10">
+    <section className="max-w-5xl m-auto flex flex-col gap-10 px-6">
       <SectionTitle headline="Simple by design" title="Powerful by default" />
 
       <div className="grid grid-cols-1 lg:grid-cols-8 gap-8">

@@ -9,7 +9,7 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: 'Lune',
+  title: 'Vendyx',
   description: 'An open-source solution for commerce management.'
 };
 
@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`dark antialiased ${geistSans.variable}`}>
-        <div className="p-6">{children}</div>
+        <div className="pb-6">{children}</div>
         <Analytics />
       </body>
     </html>

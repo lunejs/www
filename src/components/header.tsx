@@ -1,35 +1,30 @@
-import { SparkleIcon } from '@phosphor-icons/react/dist/ssr';
+'use client';
+
+import { useEffect, useState } from 'react';
 import { Logo } from './logo';
-import { Button } from './ui/button';
 
 export const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 40);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="max-w-5xl mx-auto flex items-center justify-between">
+    <header
+      className={`z-50 sticky top-0 mx-auto flex items-center justify-center py-6 bg-background/80 backdrop-blur-lg transition-colors ${
+        isScrolled ? 'border-b' : 'border-b border-transparent'
+      }`}
+    >
       <div className="flex items-center gap-3">
         <Logo />
-        <span className="font-normal text-lg">Lune</span>
+        <span className="font-normal text-lg">Vendyx</span>
       </div>
-      <nav className="flex items-center gap-6">
-        <Button variant={'link'} className="p-0 h-fit rounded-xs" asChild>
-          <a
-            href="https://github.com/lunejs/lune/tree/main/docs"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Docs
-          </a>
-        </Button>
-        <Button variant={'link'} className="p-0 h-fit rounded-xs" asChild>
-          <a href="https://github.com/lunejs/lune" target="_blank" rel="noopener noreferrer">
-            Github
-          </a>
-        </Button>
-        <Button size={'default'} variant={'outline'} className="rounded-full" asChild>
-          <a href="http://demo.lune.to" target="_blank" rel="noopener noreferrer">
-            <SparkleIcon weight="duotone" /> Try Lune
-          </a>
-        </Button>
-      </nav>
     </header>
   );
 };
