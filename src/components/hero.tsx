@@ -1,12 +1,12 @@
 import { Button } from './ui/button';
-import { RoadHorizonIcon, SparkleIcon } from '@phosphor-icons/react/dist/ssr';
+import { SparkleIcon } from '@phosphor-icons/react/dist/ssr';
 import { Badge } from './ui/badge';
 import { BadgeCheckIcon } from 'lucide-react';
 
 export const Hero = () => {
   return (
     <section className="px-6">
-      <div className="max-w-5xl mx-auto h-[calc(100svh-24px-32px)] grid items-center">
+      <div className="max-w-5xl mx-auto grid items-center py-40">
         <div className="flex flex-col gap-6 -mt-16">
           <div className="flex flex-col">
             <Badge variant="secondary" className="bg-blue-500 text-white dark:bg-blue-600">
@@ -25,11 +25,11 @@ export const Hero = () => {
                   Get Vendyx
                 </a>
               </Button>
-              <Button size={'default'} variant={'outline'} className="rounded-full" asChild>
+              {/* <Button size={'default'} variant={'outline'} className="rounded-full" asChild>
                 <a href="http://demo.vendyx.so" target="_blank" rel="noopener noreferrer">
                   <SparkleIcon weight="duotone" /> Try Vendyx
                 </a>
-              </Button>
+              </Button> */}
             </div>
             {/* <div className="flex items-center gap-4 w-full">
             <GetVendyx />
